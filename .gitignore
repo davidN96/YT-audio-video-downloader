@@ -2,4 +2,6 @@ node_modules
 *.mp3
 *.mp4
 *.flv
+*.css
+*.css.map
 package-lock.json
