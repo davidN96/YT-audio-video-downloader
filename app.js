@@ -4,6 +4,7 @@ import path from "path";
 import logger from "morgan";
 import cookieParser from "cookie-parser";
 import sassMiddleware from "node-sass-middleware";
+import dir from "./utils/dir.js";
 
 import indexRouter from "./routes/index.js";
 
