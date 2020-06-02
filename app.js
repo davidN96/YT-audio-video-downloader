@@ -5,6 +5,7 @@ import logger from "morgan";
 import cookieParser from "cookie-parser";
 import sassMiddleware from "node-sass-middleware";
 import dotenv from "dotenv";
+import dir from "./utils/dir.js";
 
 import indexRouter from "./routes/index.js";
 
@@ -12,6 +13,9 @@ dotenv.config();
 
 const app = express();
 const __dirname = path.resolve();
+const outputDir = process.env.OUTPUT_DIR || "downloaded";
+
+dir.createDir(outputDir);
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
