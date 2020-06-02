@@ -40,6 +40,10 @@ Views for client are generated on server side with PUG view engine.
 
 ---
 
+#### App screens
+
+---
+
 ### UML diagram :triangular_ruler:
 
 ![Sequence diagram](uml/sequence.svg)
