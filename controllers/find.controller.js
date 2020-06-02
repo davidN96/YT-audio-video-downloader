@@ -17,9 +17,9 @@ export default {
         const videoId = info.playerResponse.videoDetails.videoId;
 
         res.render("find", {
-          title: info.title,
-          time: time.secondsToHours(info.length_seconds),
-          author: info.author.name,
+          title: info.videoDetails.title,
+          time: time.secondsToHours(info.videoDetails.lengthSeconds),
+          author: info.videoDetails.author.name,
           thumbnail: `https://img.youtube.com/vi/${videoId}/0.jpg`,
           videoURL: url,
         });

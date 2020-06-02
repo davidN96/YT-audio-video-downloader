@@ -35,8 +35,10 @@ export default {
           });
 
           res.download(fileOutputDirectory + ".mp3");
+          dir.removeDir(path.join(outputDirectory, clientID));
         } else {
           res.download(fileOutputDirectory + ".mp4");
+          dir.removeDir(path.join(outputDirectory, clientID));
         }
       });
   },
