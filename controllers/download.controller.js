@@ -22,7 +22,10 @@ export default {
           error: err,
         });
       }
-      fileOutputDirectory = path.join(fileOutputDirectory, info.title);
+      fileOutputDirectory = path.join(
+        fileOutputDirectory,
+        info.videoDetails.title
+      );
     });
 
     ytdl(videoURL)
