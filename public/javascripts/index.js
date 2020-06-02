@@ -7,7 +7,7 @@ urlForm.addEventListener("submit", (e) => {
   const isTooShort = videoUrlInput.value.length < 20;
   const noHttps = !videoUrlInput.value.includes("https");
   const noYoutube =
-    !videoUrlInput.value.includes("youtube") ||
+    !videoUrlInput.value.includes("youtube") &&
     !videoUrlInput.value.includes("youtu.be");
 
   if (isEmpty || isTooShort || noHttps || noYoutube) {
