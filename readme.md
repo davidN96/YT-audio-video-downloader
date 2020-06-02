@@ -46,7 +46,7 @@ Views for client are generated on server side with PUG view engine.
 
 ###### Index page
 
-![Sequence diagram](screens/desktop/index.JPG)
+![App screen](screens/desktop/index.JPG)
 
 ---
 
@@ -54,7 +54,7 @@ Views for client are generated on server side with PUG view engine.
 
 ###### Info page
 
-![Sequence diagram](screens/desktop/find.JPG)
+![App screen](screens/desktop/find.JPG)
 
 ---
 
@@ -62,7 +62,7 @@ Views for client are generated on server side with PUG view engine.
 
 ###### Downloaded file
 
-![Sequence diagram](screens/mobile/downloaded.JPG)
+![App screen](screens/mobile/downloaded.JPG)
 
 ---
 
@@ -70,7 +70,7 @@ Views for client are generated on server side with PUG view engine.
 
 ###### Index page
 
-![Sequence diagram](screens/mobile/index.JPG)
+![App screen](screens/mobile/index.jpg)
 
 ---
 
@@ -78,7 +78,7 @@ Views for client are generated on server side with PUG view engine.
 
 ###### Info page
 
-![Sequence diagram](screens/mobile/info.JPG)
+![App screen](screens/mobile/info.jpg)
 
 ---
 
@@ -86,11 +86,11 @@ Views for client are generated on server side with PUG view engine.
 
 ###### Downloading file
 
-![Sequence diagram](screens/mobile/progress.JPG)
+![App screen](screens/mobile/progress.jpg)
 
 ###### Downloaded file
 
-![Sequence diagram](screens/mobile/downloaded.JPG)
+![App screen](screens/mobile/downloaded.jpg)
 
 ---
 
