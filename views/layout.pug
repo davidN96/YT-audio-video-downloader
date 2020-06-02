@@ -1,7 +1,23 @@
 doctype html
 html
   head
-    title= title
+    title='YouTube downloader app.'
     link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
   body
-    block content
+    div.wrapper
+      header.mainHead
+        a(href='/')
+          div.logo
+            h1.logo_firstPart You
+            h1.logo_secondPart Tube
+            h1.logo_rest Downloader
+
+      main.container
+        block content
+
+      footer.mainFooter
+        p Developed in 2020 by daven96 &copy; All rights reserved.
+
+      script(src="/javascripts/index.js")
+
