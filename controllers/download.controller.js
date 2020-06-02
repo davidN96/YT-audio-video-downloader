@@ -26,21 +26,18 @@ export default {
     });
 
     ytdl(videoURL)
-      .pipe(fs.createWriteStream(fileOutputDirectory+".mp4"))
-      .on("finish", () => {
+      .pipe(fs.createWriteStream(fileOutputDirectory + ".mp4"))
+      .on("finish", async () => {
+        if (type === "audio") {
+          await extractAudio({
+            input: fileOutputDirectory + ".mp4",
+            output: fileOutputDirectory + ".mp3",
+          });
 
-        if(type ==='audio'){
-            await extractAudio({
-                input: fileOutputDirectory+".mp4",
-                output: fileOutputDirectory+".mp3"
-            });
-
-            res.download(fileOutputDirectory+".mp3");
+          res.download(fileOutputDirectory + ".mp3");
+        } else {
+          res.download(fileOutputDirectory + ".mp4");
         }
-         else {
-            res.download(fileOutputDirectory+".mp4");
-         }
-
       });
   },
 };
