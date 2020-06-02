@@ -5,7 +5,7 @@ import path from "path";
 import extractAudio from "ffmpeg-extract-audio";
 
 export default {
-  downloadAudio: async (req, res, next) => {
+  downloadFile: async (req, res, type) => {
     const clientID =
       "client-" + req.connection.remoteAddress.replace(/\D/g, "");
     const outputDirectory = process.env.OUTPUT_DIR || "downloaded";
@@ -22,13 +22,25 @@ export default {
           error: err,
         });
       }
-      fileOutputDirectory = path.join(fileOutputDirectory, `${info.title}.mp4`);
+      fileOutputDirectory = path.join(fileOutputDirectory, info.title);
     });
 
     ytdl(videoURL)
-      .pipe(fs.createWriteStream(fileOutputDirectory))
+      .pipe(fs.createWriteStream(fileOutputDirectory+".mp4"))
       .on("finish", () => {
-        // res.download(fileOutputDirectory);
+
+        if(type ==='audio'){
+            await extractAudio({
+                input: fileOutputDirectory+".mp4",
+                output: fileOutputDirectory+".mp3"
+            });
+
+            res.download(fileOutputDirectory+".mp3");
+        }
+         else {
+            res.download(fileOutputDirectory+".mp4");
+         }
+
       });
   },
 };
