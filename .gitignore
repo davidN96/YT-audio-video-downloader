@@ -5,6 +5,5 @@ node_modules
 *.css
 *.css.map
 *.txt
-*.jpg
 *.png
 package-lock.json

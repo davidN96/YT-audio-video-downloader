@@ -40,7 +40,57 @@ Views for client are generated on server side with PUG view engine.
 
 ---
 
-#### App screens
+### Application screens :straight_ruler:
+
+#### Desktop version
+
+###### Index page
+
+![Sequence diagram](screens/desktop/index.JPG)
+
+---
+
+---
+
+###### Info page
+
+![Sequence diagram](screens/desktop/find.JPG)
+
+---
+
+---
+
+###### Downloaded file
+
+![Sequence diagram](screens/mobile/downloaded.JPG)
+
+---
+
+#### Mobile version
+
+###### Index page
+
+![Sequence diagram](screens/mobile/index.JPG)
+
+---
+
+---
+
+###### Info page
+
+![Sequence diagram](screens/mobile/info.JPG)
+
+---
+
+---
+
+###### Downloading file
+
+![Sequence diagram](screens/mobile/progress.JPG)
+
+###### Downloaded file
+
+![Sequence diagram](screens/mobile/downloaded.JPG)
 
 ---
 
