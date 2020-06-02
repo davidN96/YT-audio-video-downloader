@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import "_mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.mainHead {
+  display: flex;
+  width: 100vw;
+  padding: 3vh 2vw;
+  justify-content: center;
+
+  @include md {
+    justify-content: flex-start;
+  }
+
+  a {
+    .logo {
+      display: flex;
+
+      .logo_firstPart {
+        margin: 0 3px;
+      }
+
+      .logo_secondPart {
+        background-color: red;
+        color: white;
+        border-radius: 9px;
+        padding: 2px 5px;
+      }
+
+      .logo_rest {
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10vw;
+
+  .urlInput {
+    padding: 5px 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-align: center;
+    outline: none;
+  }
+
+  .searchBtn {
+    font-size: 1.4rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 5px;
+    transition: transform 0.1s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .errorInfo {
+    padding: 2vh;
+    text-align: center;
+    color: red;
+  }
+
+  #hiddenInput {
+    display: none;
+  }
+
+  .videoInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh 2vh;
+    margin: 0 5vw;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    .thumbnail {
+      border-radius: 10px;
+      width: 150px;
+      height: 110px;
+      margin-bottom: 4vh;
+    }
+
+    .title {
+      font-weight: normal;
+      line-height: 3rem;
+    }
+
+    .time {
+      display: flex;
+      font-size: 1rem;
+      font-weight: normal;
+      padding: 5px 0;
+    }
+
+    .author {
+      display: flex;
+      text-align: left;
+      font-size: 0.7rem;
+      font-weight: normal;
+      padding: 5px 0;
+    }
+
+    .controlPanel {
+      display: flex;
+
+      form {
+        input[type="submit"] {
+          border-radius: 5px;
+          margin: 4vh 15px 0;
+          padding: 5px 10px;
+          cursor: pointer;
+          transition: 0.2s;
+          outline: none;
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          background-color: transparent;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.mainFooter {
+  padding: 5vh;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  text-align: center;
+
+  @include md {
+    padding: 1vh;
+  }
+}
