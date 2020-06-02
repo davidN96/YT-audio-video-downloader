@@ -12,11 +12,11 @@ router.get("/", function (req, res, next) {
 router.get("/find", findController.getInfo);
 
 router.get("/downloadAudio", (req, res) =>
-  findController.downloadAudio(req, res, "audio")
+  downloadController.downloadFile(req, res, "audio")
 );
 
 router.get("/downloadVideo", (req, res) =>
-  findController.downloadAudio(req, res, "video")
+  downloadController.downloadFile(req, res, "video")
 );
 
 export default router;
