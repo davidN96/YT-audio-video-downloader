@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div.videoInfo.clearfix
+        img.thumbnail(src=thumbnail)
+        h3.title=title
+        h3.author=author
+        h3.time=time
+        div.controlPanel
+            form(action=`/downloadAudio` method="GET")
+                input(type='text' name='videoURL' value=videoURL id="hiddenInput")
+                input(type="submit" value="Download Audio")
+            form(action="/downloadVideo" method="GET")
+                input(type='text' name='videoURL' value=videoURL id="hiddenInput")
+                input(type="submit" value="Download Video")
