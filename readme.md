@@ -62,7 +62,7 @@ Views for client are generated on server side with PUG view engine.
 
 ###### Downloaded file
 
-![App screen](screens/desktop/downloaded.jpg)
+![App screen](screens/desktop/downloaded.JPG)
 
 ---
 
