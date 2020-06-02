@@ -2,6 +2,7 @@ import dir from "../utils/dir.js";
 import ytdl from "ytdl-core";
 import fs from "fs";
 import path from "path";
+import extractAudio from "ffmpeg-extract-audio";
 
 export default {
   downloadAudio: async (req, res, next) => {
@@ -11,7 +12,7 @@ export default {
     let fileOutputDirectory = path.join(outputDirectory, clientID);
     const { videoURL } = req.query;
 
-    dirUtils.createDir(fileOutputDirectory);
+    dir.createDir(fileOutputDirectory);
 
     await ytdl.getInfo(videoURL, (err, info) => {
       if (err) {
@@ -27,7 +28,7 @@ export default {
     ytdl(videoURL)
       .pipe(fs.createWriteStream(fileOutputDirectory))
       .on("finish", () => {
-        res.download(fileOutputDirectory);
+        // res.download(fileOutputDirectory);
       });
   },
 };
